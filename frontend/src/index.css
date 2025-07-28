@@ -1,0 +1,1140 @@
+/* ==========================
+    Global Reset and Box Sizing
+    ========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==========================
+        Body - Global Styles
+        ========================== */
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #1c1e26, #3c4b57); /* Dark Gradient */
+  color: white;
+  min-height: 100vh;
+}
+
+/* ==========================
+        Page Container
+        ========================== */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  padding-bottom: 60px;
+  text-align: center;
+  background: rgba(44, 62, 80, 0.6); /* Glass Container */
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================
+        Titles
+        ========================== */
+.title {
+  font-size: 2rem;
+  color: #ecf0f1;
+  margin-bottom: 25px; /* Increased margin */
+}
+
+/* ==========================
+        Card Section
+        ========================== */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px; /* Added margin */
+}
+
+.card {
+  background: rgba(44, 62, 80, 0.6); /* Glass Effect */
+  backdrop-filter: blur(12px);
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  width: 250px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================
+        No Sessions Message
+        ========================== */
+.no-session {
+  color: #ecf0f1;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+/* ==========================
+        Buttons
+        ========================== */
+.btn {
+  background: rgba(52, 152, 219, 0.6);
+  backdrop-filter: blur(5px);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+  margin: 10px; /* Increased margin for spacing */
+}
+
+.btn:hover {
+  background: rgba(41, 128, 185, 0.8);
+}
+
+/* Delete Button */
+.delete {
+  background: rgba(255, 0, 0, 0.6);
+}
+
+.delete:hover {
+  background: rgba(139, 0, 0, 0.8);
+}
+
+/* ==========================
+        Forms
+        ========================== */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 20px; /* Added margin */
+}
+
+.form label {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 5px; /* Added spacing */
+}
+
+.form input {
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  margin-top: 5px; /* Added margin for spacing */
+}
+
+.form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ==========================
+        Responsive Design
+        ========================== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .navbar-logo {
+    margin-bottom: 1rem;
+  }
+
+  .navbar-buttons {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px; /* Added margin */
+  }
+
+  .navbar-button {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0; /* Adjusted margin */
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px; /* Added margin */
+  }
+}
+
+/* holidays page styles */
+/* Holidays Page Specific Styles */
+.holidays-page .container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: white;
+}
+
+/* Heading */
+.holidays-page h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Error message */
+.holidays-page .error {
+  color: #ff4d4d;
+  background: rgba(255, 77, 77, 0.1);
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Holiday list */
+.holidays-page ul {
+  list-style: none;
+  padding: 0;
+}
+
+.holidays-page li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+}
+
+/* Buttons */
+.holidays-page button {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.holidays-page button:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Input field */
+.holidays-page input[type="date"] {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Button disabled */
+.holidays-page button:disabled {
+  background: rgba(255, 255, 255, 0.1);
+  cursor: not-allowed;
+}
+
+/* subjectlist css
+----------------------------------------------- */
+.subject-list-container {
+  max-width: 900px;
+  background: rgba(44, 62, 80, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: auto;
+}
+
+.subject-list-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ecf0f1;
+  margin-bottom: 15px;
+}
+
+.glass-button {
+  padding: 8px 15px;
+  background: rgba(52, 152, 219, 0.6);
+  backdrop-filter: blur(5px);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.glass-button:hover {
+  background: rgba(41, 128, 185, 0.8);
+}
+
+.subject-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.subject-card {
+  width: 100%;
+  background: rgba(44, 62, 80, 0.6);
+  backdrop-filter: blur(12px);
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.subject-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.subject-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #f1c40f;
+  text-align: center;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.subject-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.info-box {
+  flex: 1;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.remaining-message {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #e74c3c;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ==========================
+    CreateSubject Page Styles
+========================== */
+.glass-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(44, 62, 80, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.glass-container h2 {
+  font-size: 2rem;
+  color: #ecf0f1;
+  margin-bottom: 15px;
+}
+
+/* Form Styles */
+.glass-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.glass-container label {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.glass-container input,
+.glass-container select {
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* Ensure placeholder text is visible */
+.glass-container input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Fix invisible options issue */
+.glass-container select {
+  appearance: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.glass-container select option {
+  background: #2c3e50; /* Dark background */
+  color: white; /* White text */
+}
+
+/* Submit Button */
+.glass-container button {
+  padding: 10px 15px;
+  background: rgba(52, 152, 219, 0.6);
+  backdrop-filter: blur(5px);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.glass-container button:hover {
+  background: rgba(41, 128, 185, 0.8);
+}
+
+/* ==========================
+    Responsive Design
+========================== */
+@media (max-width: 768px) {
+  .glass-container {
+    padding: 15px;
+  }
+
+  .glass-container input,
+  .glass-container select {
+    max-width: 100%;
+  }
+}
+
+/* ==========================
+   Subject Details Styles
+   ========================== */
+/* ==========================
+   Subject Details Page - COMPACT SPACING
+   ========================== */
+.subject-details {
+  max-width: 1200px;
+  width: 60%;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  background: rgba(44, 62, 80, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: center;
+}
+
+/* 🔹 Titles & Headings */
+.subject-details h1 {
+  color: #f1c40f;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.subject-details h2 {
+  color: #f1c40f;
+  font-size: 1.5rem;
+  margin: 1.2rem 0 0.8rem;
+}
+
+.subject-details h3 {
+  color: #f1c40f;
+  font-size: 1.3rem;
+  margin: 1rem 0 0.7rem;
+}
+
+/* 🔹 Subject Info Row */
+.subject-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.subject-info p {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* 🔹 Class Schedule */
+.subject-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.subject-details li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  width: 75%;
+  max-width: 450px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.subject-details li:hover {
+  transform: translateY(-2px);
+}
+
+/* 🔹 Button Group */
+.button-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 1.5rem auto;
+}
+
+.button-group button {
+  padding: 0.6rem 1.5rem;
+  background: rgba(52, 152, 219, 0.7);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  min-width: 160px;
+}
+
+.button-group button:hover {
+  background: rgba(41, 128, 185, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.delete-button {
+  background: rgba(231, 76, 60, 0.7) !important;
+}
+
+.delete-button:hover {
+  background: rgba(192, 57, 43, 0.9) !important;
+}
+
+/* 🔹 Missed Classes Section */
+.missed-classes {
+  background: rgba(231, 76, 60, 0.15);
+  padding: 0.2rem;
+  padding-bottom: 1.2rem;
+  border-radius: 8px;
+
+  border-radius: 12px;
+  margin: 1.2rem auto;
+  width: 90%;
+  max-width: 600px;
+}
+
+.missed-classes ul {
+  list-style: none !important;
+  padding: 0;
+  margin: 0;
+}
+
+.missed-classes li {
+  background: rgba(231, 76, 60, 0.25) !important;
+  margin: 0.4rem 0;
+  padding: 0.8rem;
+  border-radius: 8px;
+}
+
+/* 🔹 Add Missed Class Form */
+.add-missed-class {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem auto;
+  width: 85%;
+  max-width: 450px;
+}
+
+.add-missed-class input,
+.add-missed-class select {
+  padding: 0.6rem;
+  width: 100%;
+  margin: 0.4rem auto;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(44, 62, 80, 0.9);
+  color: white;
+  font-size: 0.95rem;
+  max-width: 380px;
+  display: block;
+}
+
+.add-missed-class input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.add-missed-class button {
+  padding: 0.6rem;
+  background: rgba(52, 152, 219, 0.7);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.8rem;
+  width: 100%;
+  max-width: 380px;
+  transition: all 0.3s;
+}
+
+.add-missed-class button:hover {
+  background: rgba(41, 128, 185, 0.9);
+  transform: translateY(-2px);
+}
+
+/* 🔹 Error Message */
+.error {
+  color: #ff6b6b;
+  background: rgba(231, 76, 60, 0.2);
+  padding: 0.7rem;
+  border-radius: 6px;
+  margin: 0.8rem auto;
+  max-width: 450px;
+  font-weight: 500;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+  .subject-details {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .subject-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .subject-details li {
+    width: 100%;
+  }
+
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-group button {
+    width: 100%;
+  }
+
+  .missed-classes,
+  .add-missed-class {
+    width: 100%;
+  }
+}
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1c1e26, #3c4b57);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.auth-card {
+  background: rgba(44, 62, 80, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(18px);
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.auth-card:hover {
+  transform: translateY(-3px);
+}
+
+.auth-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.auth-input-group {
+  margin-bottom: 1rem;
+}
+
+.auth-input-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #dfe6e9;
+  font-size: 0.9rem;
+}
+
+.auth-input-group input {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 0.75rem;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+
+.auth-input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.auth-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: rgba(52, 152, 219, 0.6);
+  border: none;
+  border-radius: 0.75rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
+  transition: all 0.3s ease;
+}
+
+.auth-button:hover {
+  background: rgba(52, 152, 219, 0.8);
+  box-shadow: 0 6px 16px rgba(52, 152, 219, 0.6);
+}
+
+.auth-message {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 0.5rem;
+  text-align: center;
+  color: #f2f2f2;
+}
+
+.auth-toggle {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+.auth-toggle span {
+  cursor: pointer;
+  color: #3498db;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+/* ==========================
+        Navbar Styles
+   ========================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin-bottom: 20px;
+  background: rgba(44, 62, 80, 0.6); /* Glass Effect */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ecf0f1;
+}
+
+/* Navbar Buttons Container */
+.navbar-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-left: 10px;
+}
+
+/* Button Styling */
+.navbar-button {
+  padding: 0.5rem 1rem;
+  background: rgba(52, 152, 219, 0.6); /* Glass Button */
+  backdrop-filter: blur(5px);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s, color 0.3s;
+  margin: 5px;
+  text-decoration: none; /* removes underline */
+}
+
+/* Hover Effect */
+.navbar-button:hover {
+  background: rgba(41, 128, 185, 0.8);
+}
+
+/* Active Button Style */
+/* Active Button Style */
+.navbar-button.active {
+  background: rgba(41, 128, 185, 0.95); /* Stronger blue */
+  color: #ffffff;
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.3),
+    0 0 8px rgba(41, 128, 185, 0.4); /* Glow effect */
+  transform: translateY(1px);
+  font-weight: bold;
+}
+.navbar-button.active {
+  border: 2px solid #2980b9;
+}
+
+/* ==========================
+          User Info & Logout
+     ========================== */
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #ecf0f1;
+}
+
+.username {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ecf0f1;
+}
+
+/* Logout Button */
+.logout-button {
+  padding: 0.5rem 1rem;
+  background: rgba(231, 76, 60, 0.6); /* Red glass style */
+  backdrop-filter: blur(5px);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.logout-button:hover {
+  background: rgba(192, 57, 43, 0.8);
+}
+
+/* ========================== timetable ====*/
+
+.timetable-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+/* Timetable Table */
+.timetable {
+  width: 100%;
+  max-width: 900px;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.1); /* Glass effect */
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Headers */
+.timetable th {
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  padding: 12px;
+  text-align: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Table Rows */
+.timetable td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+  color: white;
+}
+
+/* Timing Column */
+.timetable td.timing {
+  background: rgba(0, 0, 0, 0.3);
+  color: #f1f1f1;
+  font-weight: bold;
+}
+
+/* Empty Slots */
+.timetable td.subject {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+/* Multi-slot Subjects */
+.timetable td.multi-slot {
+  background: rgba(0, 255, 127, 0.3);
+  font-weight: bold;
+  border-bottom: 2px solid rgba(0, 255, 127, 0.5);
+}
+
+/* Date Cells */
+.timetable .date-cell {
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #f1f1f1;
+}
+
+/* Container with vertical layout */
+.timetable-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+/* Download Button */
+.download-btn {
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/*nav bar*/
+
+.navbar-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-button {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.navbar-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-button.active {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+  color: #ffeb3b;
+}
+
+.update-button {
+  background-color: #43a047;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.update-button:hover {
+  background-color: #2e7d32;
+}
+
+/* update subject ----------------*/
+
+.update-subject-form {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(44, 62, 80, 0.6); /* Glass effect dark base */
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  font-family: "Segoe UI", sans-serif;
+  color: #f1f5f9;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.update-subject-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #e0f2fe;
+}
+
+.update-subject-form h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #bae6fd;
+}
+
+.update-subject-form input,
+.update-subject-form select {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #64748b;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: rgba(30, 41, 59, 0.7);
+  color: #f1f5f9;
+  transition: border 0.3s, background-color 0.3s;
+}
+
+.update-subject-form input::placeholder {
+  color: #cbd5e1;
+}
+
+.update-subject-form input:focus,
+.update-subject-form select:focus {
+  border-color: #38bdf8;
+  outline: none;
+  background-color: rgba(30, 41, 59, 0.85);
+}
+
+.update-subject-form .timing-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.update-subject-form label {
+  flex: 1;
+  font-weight: 500;
+  color: #f0f9ff;
+}
+
+.update-subject-form .timing-row select {
+  flex: 2;
+}
+
+.update-subject-form .missed-class-item {
+  background: rgba(51, 65, 85, 0.6);
+  border: 1px solid #334155;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  backdrop-filter: blur(5px);
+}
+
+.update-subject-form .missed-class-item summary {
+  font-weight: 600;
+  cursor: pointer;
+  color: #7dd3fc;
+}
+
+.update-subject-form .missed-class-item button {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background-color: rgba(239, 68, 68, 0.8);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.update-subject-form .missed-class-item button:hover {
+  background-color: rgba(220, 38, 38, 1);
+}
+
+.update-subject-form .update-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background: rgba(52, 152, 219, 0.6); /* Glass button */
+  color: #f0f9ff;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.update-subject-form .update-btn:hover {
+  background-color: rgba(30, 144, 255, 0.85);
+  transform: translateY(-1px);
+}
+
+.update-subject-form .error {
+  color: #f87171;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
