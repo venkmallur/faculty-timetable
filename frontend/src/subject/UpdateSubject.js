@@ -42,7 +42,7 @@ const UpdateSubject = () => {
     const fetchSubject = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8000/api/subject/${id}`,
+          `${process.env.REACT_APP_API_BASE_URL}/api/subject/${id}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -98,7 +98,7 @@ const UpdateSubject = () => {
     }));
 
     try {
-      const response = await fetch(`http://localhost:8000/api/subject/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/subject/${id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -120,7 +120,7 @@ const UpdateSubject = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`http://localhost:8000/api/subject/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/subject/${id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
