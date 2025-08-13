@@ -17,7 +17,7 @@ const SubjectDetails = () => {
     const fetchSubject = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8000/api/subject/${id}`,
+          `${process.env.REACT_APP_API_BASE_URL}/api/subject/${id}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -40,7 +40,7 @@ const SubjectDetails = () => {
       return;
 
     try {
-      const response = await fetch(`http://localhost:8000/api/subject/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/subject/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -62,7 +62,7 @@ const SubjectDetails = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:8000/api/subject/classnottaken/${id}`,
+        `${process.env.REACT_APP_API_BASE_URL}/api/subject/classnottaken/${id}`,
         {
           method: "PATCH",
           headers: {
