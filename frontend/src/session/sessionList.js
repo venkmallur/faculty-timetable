@@ -11,7 +11,7 @@ const SessionList = () => {
       try {
         const token = localStorage.getItem("token");
 
-        const res = await fetch("http://localhost:8000/api/session", {
+        const res = await fetch("${process.env.REACT_APP_API_BASE_URL}/api/session", {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`, // ✅ Send token
