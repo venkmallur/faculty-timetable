@@ -38,7 +38,7 @@ const CreateSubject = () => {
     const fetchSessions = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await fetch("http://localhost:8000/api/session", {
+        const response = await fetch("${process.env.REACT_APP_API_BASE_URL}/api/session", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -72,7 +72,7 @@ const CreateSubject = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:8000/api/subject", {
+      const response = await fetch("${process.env.REACT_APP_API_BASE_URL}/api/subject", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
