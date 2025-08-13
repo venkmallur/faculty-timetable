@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://faculty-timetable-frontend.onrender.com",
   })
 );
 app.use("/api/auth", authRoutes);
