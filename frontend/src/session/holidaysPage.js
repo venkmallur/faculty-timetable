@@ -10,7 +10,7 @@ const HolidaysPage = () => {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/session/holidays/${id}/`, {
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/api/session/holidays/${id}/`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -48,7 +48,7 @@ const HolidaysPage = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:8000/api/session/add-holiday/${id}/`,
+        `${process.env.REACT_APP_API_BASE_URL}/api/session/add-holiday/${id}/`,
         {
           method: "PATCH",
           headers: {
@@ -76,7 +76,7 @@ const HolidaysPage = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:8000/api/session/remove-holiday/${id}/`,
+        `${process.env.REACT_APP_API_BASE_URL}/api/session/remove-holiday/${id}/`,
         {
           method: "PATCH",
           headers: {
