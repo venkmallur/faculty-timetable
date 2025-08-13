@@ -14,7 +14,7 @@ const CreateSession = () => {
     const token = localStorage.getItem("token");
 
     try {
-      const response = await fetch("http://localhost:8000/api/session", {
+      const response = await fetch("${process.env.REACT_APP_API_BASE_URL}/api/session", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
