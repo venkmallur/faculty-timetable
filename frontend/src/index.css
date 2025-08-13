@@ -888,6 +888,18 @@ body {
 }
 
 /* Timetable Table */
+/* ========================== timetable ====*/
+
+.timetable-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  overflow-x: auto;
+  width: 100%;
+}
+
+/* Timetable Table */
 .timetable {
   width: 100%;
   max-width: 900px;
@@ -897,6 +909,7 @@ body {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  min-width: 600px; /* Ensures horizontal scroll on small devices */
 }
 
 /* Table Headers */
@@ -906,6 +919,7 @@ body {
   padding: 12px;
   text-align: center;
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  white-space: nowrap;
 }
 
 /* Table Rows */
@@ -915,6 +929,7 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   font-weight: bold;
   color: white;
+  white-space: nowrap;
 }
 
 /* Timing Column */
@@ -945,15 +960,6 @@ body {
   color: #f1f1f1;
 }
 
-/* Container with vertical layout */
-.timetable-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-  overflow-x: auto;
-}
-
 /* Download Button */
 .download-btn {
   background: rgba(0, 0, 0, 0.3);
@@ -972,6 +978,42 @@ body {
 .download-btn:hover {
   background: rgba(0, 0, 0, 0.5);
 }
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .timetable {
+    font-size: 0.8rem; /* Smaller text on mobile */
+    min-width: 500px; /* Allow scroll */
+  }
+
+  .timetable th,
+  .timetable td {
+    padding: 8px;
+  }
+
+  .download-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timetable {
+    font-size: 0.7rem;
+    min-width: 400px;
+  }
+
+  .timetable th,
+  .timetable td {
+    padding: 6px;
+  }
+
+  .download-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 
 /*nav bar*/
 
