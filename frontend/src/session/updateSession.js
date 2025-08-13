@@ -14,7 +14,7 @@ const UpdateSession = () => {
     const fetchSession = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8000/api/session/${id}`,
+          `${process.env.REACT_APP_API_BASE_URL}/api/session/${id}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -39,7 +39,7 @@ const UpdateSession = () => {
     setError("");
 
     try {
-      const response = await fetch(`http://localhost:8000/api/session/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/session/${id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
