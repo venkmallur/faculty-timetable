@@ -42,7 +42,7 @@ const Timetable = () => {
       const token = localStorage.getItem("token");
 
       try {
-        const response = await fetch("http://localhost:8000/api/timetable", {
+        const response = await fetch("${process.env.REACT_APP_API_BASE_URL}/api/timetable", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
