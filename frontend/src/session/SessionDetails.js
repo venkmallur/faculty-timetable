@@ -10,7 +10,7 @@ const SessionDetails = () => {
   useEffect(() => {
     const fetchSession = async () => {
       try {
-        const res = await fetch(`http://localhost:8000/api/session/${id}`, {
+        const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/session/${id}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
