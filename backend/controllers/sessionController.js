@@ -117,11 +117,15 @@ const getHolidays = async (startdate, enddate) => {
   const holidays = [];
   const apiKey = process.env.apikey;
   const country = "IN";
-  const state = "KA";
+  
+const currentYear = new Date().getFullYear();
+const previousYear = currentYear - 1;
 
-  const response = await axios.get(
-    `https://holidayapi.com/v1/holidays?key=${apiKey}&country=${country}&year=2024`
-  );
+const response = await axios.get(
+  `https://holidayapi.com/v1/holidays?key=${apiKey}&country=${country}&year=${previousYear}`
+);
+
+ 
 
   const publicHolidays = response.data.holidays || [];
   for (const holiday of publicHolidays) {
