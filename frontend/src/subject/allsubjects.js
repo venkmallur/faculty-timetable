@@ -10,7 +10,7 @@ const SubjectList = () => {
   useEffect(() => {
     const fetchSubjects = async () => {
       try {
-        const response = await fetch("${process.env.REACT_APP_API_BASE_URL}/api/subject", {
+        const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/subject`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
