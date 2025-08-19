@@ -7,7 +7,7 @@ const authRoutes = require("./routes/authRoutes");
 const protect = require("./middleware/authMiddleware");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const path = require("path"); // <-- Don't forget this!
+
 
 const app = express();
 
@@ -29,13 +29,7 @@ app.use("/api/session", protect, sessionRoutes);
 app.use("/api/subject", protect, subjectRoutes);
 app.use("/api/timetable", protect, timetableRoutes);
 
-// Serve static React build files
-app.use(express.static(path.join(__dirname, "client", "build")));
 
-// Catch-all for React Router (reload fix)
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-});
 
 // Connect to DB and start server
 mongoose
