@@ -7,7 +7,7 @@ const authRoutes = require("./routes/authRoutes");
 const protect = require("./middleware/authMiddleware");
 const mongoose = require("mongoose");
 const cors = require("cors");
-
+const path = require('path');
 
 const app = express();
 
