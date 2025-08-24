@@ -13,6 +13,7 @@ const app = express();
 
 // Middleware
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'build')));
 
 app.use(
   cors({
@@ -28,8 +29,10 @@ app.use("/api/auth", authRoutes);
 app.use("/api/session", protect, sessionRoutes);
 app.use("/api/subject", protect, subjectRoutes);
 app.use("/api/timetable", protect, timetableRoutes);
-
-
+app.use('/api', apiRoutes);
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build/index.html'));
+});
 
 // Connect to DB and start server
 mongoose
