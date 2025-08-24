@@ -7,13 +7,13 @@ const authRoutes = require("./routes/authRoutes");
 const protect = require("./middleware/authMiddleware");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const path = require('path');
+
 
 const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'build')));
+
 
 app.use(
   cors({
@@ -30,13 +30,7 @@ app.use("/api/session", protect, sessionRoutes);
 app.use("/api/subject", protect, subjectRoutes);
 app.use("/api/timetable", protect, timetableRoutes);
 
-// Serve static files from React build (adjust path to your frontend build)
-app.use(express.static(path.join(__dirname, '../frontend/build')));
 
-// Catch-all handler
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
-})
 
 // Connect to DB and start server
 mongoose
