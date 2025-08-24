@@ -29,7 +29,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/session", protect, sessionRoutes);
 app.use("/api/subject", protect, subjectRoutes);
 app.use("/api/timetable", protect, timetableRoutes);
-app.use('/api', apiRoutes);
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build/index.html'));
 });
